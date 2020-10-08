@@ -3,7 +3,7 @@
     "name": "UnitTests-ReactNative-App",
     "slug": "UnitTests-ReactNative-App",
     "version": "1.0.0",
-    "orientation": "portrait",
+    "orientation": "default", // landscape, portrait, default
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
@@ -21,6 +21,7 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": ""
   }
 }
