@@ -20,8 +20,8 @@ function WelcomeScreen(props) {
         }}/>
         <Text style={styles.logoText}>Stuff</Text>
       </View>
-      <View onTouchEndCapture={props.next} style={styles.loginButton}></View>
-      <View onTouchEndCapture={props.next} style={styles.registerButton}></View>
+      <View onTouchEnd={props.next} style={styles.loginButton}></View>
+      <View onTouchEnd={props.next} style={styles.registerButton}></View>
     </ImageBackground>
   )
 }

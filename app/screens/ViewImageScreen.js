@@ -11,8 +11,8 @@ function ViewImageScreen(props) {
         width: 100,
         height: 100
       }} />
-      <View style={styles.closeIcon} onTouchEndCapture={props.next}></View>
-      <View style={styles.deleteIcon} onTouchEndCapture={() => 
+      <View style={styles.closeIcon} onTouchEnd={props.next}></View>
+      <View style={styles.deleteIcon} onTouchEnd={() =>
         Alert.prompt("Delete", "Do the thing?", [{
           text: "Mmm Yes", onPress: () => {
             props.next()
