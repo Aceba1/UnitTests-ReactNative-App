@@ -8,12 +8,16 @@ import {
   Text,
   SafeAreaView} from 'react-native';
 import Button from './app/components/Button';
+import colors from './app/config/colors';
 
 const isAndroid = Platform.OS === "android";
 
 export default function App() {
 //  StatusBar.setHidden(true);
-  const [home, setHome] = useState(true)
+  //const [home, setHome] = useState(true)
+
+  StatusBar.setBackgroundColor(colors.navbar);
+  StatusBar.setBarStyle("light-content")
 
   return (
     <SafeAreaView style={styles.container}>
