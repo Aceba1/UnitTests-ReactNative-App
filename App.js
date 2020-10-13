@@ -17,6 +17,12 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Button text="Press me!" onPress={() => Alert.alert("Critical Exception", "Reinstall OS?", [{
+        text: "ok?",
+        onPress: () => {
+          alert("Flashing to Apple IOS in 15s...");
+        }
+      }])} />
     </SafeAreaView>
   );
 }
