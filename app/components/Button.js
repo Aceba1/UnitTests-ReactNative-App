@@ -20,10 +20,9 @@ const styles = StyleSheet.create({
     paddingVertical: 10,
     paddingHorizontal: 15,
     backgroundColor: '#aceba1',
-    borderRadius: 5
   },
   text: {
-    fontWeight: 'bold',
+    fontSize: 20,
     color: '#3e6637'
   }
 })

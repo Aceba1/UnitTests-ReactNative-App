@@ -20,7 +20,7 @@ export default function App() {
       <Button text="Press me!" onPress={() => Alert.alert("Critical Exception", "Reinstall OS?", [{
         text: "ok?",
         onPress: () => {
-          alert("Flashing to Apple IOS in 15s...");
+          alert("Flashing to "+(isAndroid?"Apple IOS":"Android OS")+" in 15s...");
         }
       }])} />
     </SafeAreaView>
