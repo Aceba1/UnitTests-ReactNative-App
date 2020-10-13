@@ -13,7 +13,7 @@ function ViewImageScreen(props) {
       }} />
       <View style={styles.closeIcon} onTouchEnd={props.next}></View>
       <View style={styles.deleteIcon} onTouchEnd={() =>
-        Alert.prompt("Delete", "Do the thing?", [{
+        Alert.alert("Delete", "Do the thing?", [{
           text: "Mmm Yes", onPress: () => {
             props.next()
         }}, {
