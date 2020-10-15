@@ -1,12 +1,28 @@
 import React from 'react'
-import { StyleSheet, Text, View, view } from 'react-native'
+import { Image, StyleSheet, Text, View, view } from 'react-native'
 import colors from '../config/colors'
+import Button from './Button'
 
-export default function NavBar() {
+export default function NavBar(props) {
   return (
-    <View>
-      <Image></Image>
-      <Text></Text>
+    <View style={styles.container}>
+      <Image source={require("../assets/CareerDevs logo.png")} />
+      <View style={styles.navBar}>
+        <Button text="Rental" onPress={() => console.log("Pressed Rental!")} 
+          buttonStyle={{...styles.navButton,
+            ...(props.page === "rental" ? styles.active.button : styles.inactive.button)}} 
+          textStyle={styles.text} />
+
+        <Button text="Return" onPress={() => console.log("Pressed Return!")} 
+          buttonStyle={{...styles.navButton,
+            ...(props.page === "return" ? styles.active.button : styles.inactive.button)}} 
+          textStyle={styles.text} />
+
+        <Button text="Balance" onPress={() => console.log("Pressed Balance!")} 
+          buttonStyle={{...styles.navButton,
+            ...(props.page === "balance" ? styles.active.button : styles.inactive.button)}} 
+          textStyle={styles.text} />
+      </View>
     </View>
   )
 }
