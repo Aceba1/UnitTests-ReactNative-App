@@ -1,4 +1,6 @@
-export default {
+import { DarkTheme } from "@react-navigation/native"
+
+export const colors = {
   primary: '#4d7ce0', //'#48f',
   primaryHover: '#648feb', //'#69f',
   primaryActive: '#2f62cf', // '#36d',
@@ -11,7 +13,16 @@ export default {
   white: '#fff',
   white1: '#eee',
   white2: '#ddd',
-  dark: '#444',
+  dark: '#444'
+}
 
-  
+export default {
+  dark: false,
+  colors: {
+    ...DarkTheme.colors,
+    primary: colors.primary,
+    background: colors.white1,
+    card: colors.navbar,
+    text: colors.white
+  }
 }

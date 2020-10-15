@@ -1,6 +1,6 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableNativeFeedback, Platform, TouchableHighlight } from 'react-native'
-import colors from '../config/colors';
+import { colors } from '../config/theme';
 
 const isAndroid = Platform.OS === "android";
 

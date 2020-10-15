@@ -4,12 +4,9 @@ import {
   StyleSheet, 
   Platform, 
   StatusBar, 
-  Alert,
-  Text,
   SafeAreaView} from 'react-native';
-import Button from './app/components/Button';
 import NavBar from './app/components/NavBar';
-import colors from './app/config/colors';
+import { colors }  from './app/config/theme';
 
 const isAndroid = Platform.OS === "android";
 
