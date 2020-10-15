@@ -2,28 +2,24 @@ import React from 'react'
 import { Image, StyleSheet, Text, View, view } from 'react-native'
 import colors from '../config/colors'
 import Button from './Button'
+import RentalScreen from '../screens/RentalScreen'
+import ReturnScreen from '../screens/ReturnScreen'
+import BalanceScreen from '../screens/BalanceScreen'
+
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import { NavigationContainer } from '@react-navigation/native'
+
+const Tab = createMaterialTopTabNavigator();
 
 export default function NavBar(props) {
   return (
-    <View style={styles.container}>
-      <Image source={require("../assets/CareerDevs logo.png")} />
-      <View style={styles.navBar}>
-        <Button text="Rental" onPress={() => console.log("Pressed Rental!")} 
-          buttonStyle={{...styles.navButton,
-            ...(props.page === "rental" ? styles.active.button : styles.inactive.button)}} 
-          textStyle={styles.text} />
-
-        <Button text="Return" onPress={() => console.log("Pressed Return!")} 
-          buttonStyle={{...styles.navButton,
-            ...(props.page === "return" ? styles.active.button : styles.inactive.button)}} 
-          textStyle={styles.text} />
-
-        <Button text="Balance" onPress={() => console.log("Pressed Balance!")} 
-          buttonStyle={{...styles.navButton,
-            ...(props.page === "balance" ? styles.active.button : styles.inactive.button)}} 
-          textStyle={styles.text} />
-      </View>
-    </View>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Rental" component={RentalScreen} />
+        <Tab.Screen name="Return" component={ReturnScreen} />
+        <Tab.Screen name="Balance" component={BalanceScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
   )
 }
 
@@ -33,11 +29,12 @@ const styles = {
       position: "absolute",
       top: 0,
       backgroundColor: colors.navbar,
-      width: "100%"
+      width: "100%",
+      alignContent: "center"
     },
     navBar: {
       justifyContent: "space-around",
-      flexDirection: "row"
+      flexDirection: "row",
     },
     navButton: {
       paddingVertical: 4,
@@ -48,8 +45,7 @@ const styles = {
     navText: {
       color: colors.white,
       fontSize: 20,
-      flex: 1,
-      textAlign: "center",
+      backgroundColor: `#000`,
     }
   }),
   active: StyleSheet.create({ // Active
