@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
   container: {
     paddingTop: isAndroid ? StatusBar.currentHeight : 0,
     flex: 1,
+    backgroundColor: colors.navbar
   },
   text: {
     fontSize: 32
