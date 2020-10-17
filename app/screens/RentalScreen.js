@@ -5,8 +5,8 @@ import ExpressRental from '../components/ExpressRental'
 export default function RentalScreen() {
   return (
     <View>
-      <Text>Rental Screen</Text>
       <ExpressRental />
+      <Text>Rental Screen</Text>
     </View>
   )
 }
